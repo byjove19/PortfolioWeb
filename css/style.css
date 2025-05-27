@@ -9361,8 +9361,93 @@ textarea.form-control {
       height: 400px;
   }
 }
+/* Default state: no background */
+.portfolio-wrap-2 .text {
+  background: none;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
 
-.portfolio-wrap-2 .text,
-.portfolio-wrap-2 .text * {
-  color:#f3c623 !important; /* Dark gray text */
+/* Hover state: light blur with semi-transparent overlay */
+.portfolio-wrap-2:hover .text {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+/* Base Glitch Effect */
+.glitch {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  animation: flicker 2s infinite;
+}
+
+/* Duplicate layers for glitch */
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: yellowgreen;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+}
+
+/* Sub-glitch for code */
+.code-effect {
+  color: #00ff9c;
+  text-shadow: 0 0 5px #00ff9c, 0 0 10px #00ff9c;
+  animation: flicker-code 3s infinite;
+}
+
+/* Sub-glitch for secure */
+.shield-effect {
+  color: #ff3c78;
+  text-shadow: 0 0 5px #ff3c78, 0 0 10px #ff3c78;
+  animation: flicker-shield 3s infinite;
+}
+
+/* Glitch Animations */
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(10px, 9999px, 50px, 0); transform: translate(-3px, -3px); }
+  20% { clip: rect(20px, 9999px, 60px, 0); transform: translate(3px, 3px); }
+  100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(60px, 9999px, 100px, 0); transform: translate(2px, -2px); }
+  20% { clip: rect(70px, 9999px, 110px, 0); transform: translate(-2px, 2px); }
+  100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes flicker-code {
+  0%, 100% { text-shadow: 0 0 5px #00ff9c, 0 0 10px #00ff9c; }
+  50% { text-shadow: 0 0 2px #00ff9c; }
+}
+
+@keyframes flicker-shield {
+  0%, 100% { text-shadow: 0 0 5px #ff3c78, 0 0 10px #ff3c78; }
+  50% { text-shadow: 0 0 2px #ff3c78; }
 }
