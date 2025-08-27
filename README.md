@@ -6,6 +6,11 @@ This portfolio site showcases the range of services I provide, from building **s
 
 ---
 
+## 🌐 Live Demo
+
+Check out the live portfolio here:  
+➡️ [ByJove Tech Portfolio](https://byjovetech.netlify.app/)  
+
 ## 🔍 What You’ll Find Here
 
 - A **clean, modern layout** with responsive design that works smoothly on all devices  
@@ -29,11 +34,6 @@ This portfolio site showcases the range of services I provide, from building **s
 At *ByJove Tech*, I’m passionate about creating software that not only looks great but is **secure**, **scalable**, and tailored to your needs. My mission is to empower businesses by building digital solutions that are as reliable as they are cutting-edge.
 
 ---
-
-## 🌐 Live Demo
-
-Check out the live portfolio here:  
-➡️ [https://byjovetech.onrender.com](https://byjovetech.onrender.com)  
 
 Feel free to explore, and don’t hesitate to reach out if you want to collaborate or learn more!
 
